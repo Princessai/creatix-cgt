@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* base */
+
+p{
+    margin: 0;
+}
+
+.container h2{
+    margin-top: 20px;
+    font-family: Provicali;
+    margin-bottom: 40px;
+}
+
+
+footer{
+    height: 350px;
+    width: 100%;
+}
+
+input[type="text"]{
+    border-bottom: 1px solid black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: #F1F1F1;
+    width: 310px;
+}
+
+input[type="submit"]{
+    background-color:#04A6D4 ;
+    border: none;
+    width: 168px;
+    color: white;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+/* block */
+
+.carreau1{
+    height: 300px;
+    background-color: #F1F1F1;
+    display: flex;
+    
+    justify-content: center;
+}
+
+
+.carreau2{
+    background-color: #04A6D4;
+    height: 50px;
+    font-family: Montserrat;
+   
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+}
+
+.container{
+    width: 835px;
+    text-align: center;
+
+}
+
+.name-number{
+display: flex;
+justify-content: space-between;
+padding-bottom: 40px;
+}
+
+.mail-last{
+display: flex;
+justify-content: space-between;
+padding-bottom: 40px;
+}

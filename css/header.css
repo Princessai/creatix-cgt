@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* base */
+
+
+
+
+
+
+/* block */
+
+header{
+    height: 220px;
+    width: 100%;
+    
+
+}
+
+nav{
+ height: 80px;
+ display: flex;
+ justify-content: center;
+}
+
+.carreau1{
+ height: 130px;
+display: flex;
+justify-content: space-around;
+
+}
+
+.container{
+    width: 506px;
+    font-family: Provicali;
+}
+
+.reseaux{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
+
+.connexion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
