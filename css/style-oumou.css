@@ -1,0 +1,38 @@
+.autres-illustration {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.autres-illustration img {
+    max-width: 100%;
+    width: 425px;
+    margin: 20px 0;
+}
+
+.illustration img {
+    max-width: 100%;
+    width: 500px;
+}
+
+.article-body {
+    margin-bottom: 30px;
+    margin: 20px 0;
+}
+
+.article-ouvert h5 {
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+hgroup span {
+    font-size: 12px;
+}
+
+.article {
+    background-color: #fff;
+    margin-top: 100px;
+    padding: 20px 0;
+}

@@ -1,39 +1,35 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #F1F1F1;
+
 }
 
+header {
+    background-color: #fff;
+
+}
 /* base */
-
-
-
 
 
 
 /* block */
 
-header{
-    height: 220px;
-    width: 100%;
-    
-
-}
-
 nav{
- height: 80px;
  display: flex;
  justify-content: center;
 }
 
-.carreau1{
- height: 130px;
+.navbar {
+    background-color: #fff !important;
+}
+.carreau-1{
 display: flex;
 justify-content: space-around;
 
 }
 
 .container{
-    width: 506px;
     font-family: Provicali;
 }
 
