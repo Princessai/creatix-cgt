@@ -46,3 +46,11 @@ justify-content: space-around;
     align-items: center;
     width: 200px;
 }
+
+.connexion a {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #2988E3;
+    color: #fff;
+    border-radius: 5px;
+}
