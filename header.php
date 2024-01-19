@@ -42,7 +42,7 @@
                   <li><a class="dropdown-item" href="#">Web</a></li>
                   <li><a class="dropdown-item" href="#">Intelligence Artificielle</a></li>
                   <li><a class="dropdown-item" href="#">Réseaux sociaux</a></li>
-                  <li><a class="dropdown-item" href="#">Mobil</a></li>
+                  <li><a class="dropdown-item" href="#">Mobile</a></li>
                 </ul>
               </li>
               <li class="nav-item">
