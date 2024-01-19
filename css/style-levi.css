@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F1F1F1;
+}
+
+
+#contain{
+    display: flex;
+    justify-content: space-around;
+    font-family:  Provicali;
+}
+
+.box{
+    width: 1000px;
+}
+
+#dede{
+    marg
+}
