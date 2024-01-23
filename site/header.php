@@ -1,3 +1,7 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +27,7 @@
       </div>
       <div class="connexion">
         <img src="images/OOjs_UI_icon_userAvatar.svg.png" alt="" height="30px">
-        <a href="">Connexion</a>
+        <a href="admin/connexion.php">Connexion</a>
       </div>
     </div>
     <div class="container">
