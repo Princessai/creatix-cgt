@@ -36,16 +36,15 @@
 </div>
             </div>
             <div class="col-sm-5">
-            <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+          
             </div>
+
+
         </div>
     </div> 
 
 
-    <div class="container-fluid text-center mt-5 ">
+    <div class="container-fluid  text-center mt-5 ">
         <div class="row">
             <div class="col-sm-12" id="contain" mb-5>
             <div>
