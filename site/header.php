@@ -39,10 +39,11 @@
                 <a class="nav-link active" aria-current="page" href="index.php">Acceuil</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="categories.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Categories
                 </a>
                 <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Toutes les categories</a></li>
                   <li><a class="dropdown-item" href="#">Web</a></li>
                   <li><a class="dropdown-item" href="#">Intelligence Artificielle</a></li>
                   <li><a class="dropdown-item" href="#">Réseaux sociaux</a></li>

@@ -1,5 +1,5 @@
 <?php  include("header.php")  ?>
-<div class="container">
+<div class="container-categorie">
       
 <div class="box1">
  <br> <br>
