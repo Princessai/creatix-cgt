@@ -1,30 +1,5 @@
 <?php
-
-$host = 'localhost';
-$database = 'creatix';
-$user = 'root';
-$psw = '';
-
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$database", $user, $psw);
-    $conn->exec('SET NAMES utf8');
-
-    if(isset($_POST['connexion'])){
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-    
-        //verifier 
-        $requete = "SELECT * FROM admins WHERE emails = $email and password = $password";
-    
-        $reponse = $conn->query($requete);
-    
-        var_dump($reponse);
-        
-    }
-} catch (PDOException $error) {
-    echo "<h1 align='center'>Impossible de se connecter à la base de données</h1>";
-}
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +17,43 @@ try {
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <form action="connexion.php" method="POST">
+                <form action="" method="POST">
+                    <?php
+                    $host = 'localhost';
+                    $database = 'creatix';
+                    $user = 'root';
+                    $psw = '';
+
+                    try {
+                        $conn = new PDO("mysql:host=$host;dbname=$database", $user, $psw);
+
+                        if (isset($_POST['connexion'])) {
+                            $email = htmlspecialchars($_POST['email']);
+                            $password = $_POST['password'];
+
+                            if (!empty($email) and !empty($password)) {
+                                //verifier 
+                                $requete = $conn->query("SELECT * FROM admin WHERE email = '$email' AND password = '$password'");
+                                $response = $requete->fetch();
+
+                                if ($response && !empty($response['id'])) {
+                                    $_SESSION['email'] = $email;
+                                    $_SESSION['password'] = $password;
+                                    $_SESSION['id'] = $response['id'];
+                                    header('Location: dashboard.php');
+                                } else {
+                                    echo "<h6>Email ou mot de passe incorrect !</h6>";
+                                }
+                            } else {
+                                echo "<h6>Impossible de se connecter à la base de données</h6>";
+                            }
+                        }
+                    } catch (PDOException $error) {
+                        echo "Erreur :" . $error->getMessage();
+                    }
+
+
+                    ?>
                     <h4>Connexion</h4>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
@@ -60,7 +71,7 @@ try {
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
