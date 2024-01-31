@@ -64,10 +64,10 @@
                 <p style=" text-align: start ;">tous(...)</p>
               </div>
               <div class="col-sm-6">
-                <button type="button" class="btn btn-light"><a href="formulaire.php">AJOUTER</a></button>
+                <button type="button" class="btn btn-light"><a href="formulaire-categorie.php">AJOUTER</a></button>
               </div>
               <div class="col-sm-12">
-
+                    <div class="categories"></div>
               </div>
             </div>
           </div>

@@ -31,10 +31,10 @@
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
       <div class="accordion-body">
      <ul >
-      <li><a href="" class="text-categorie">Web</a></li>
-      <li><a href="">Intelligence Artificielle</a></li>
-      <li><a href="">Reseaux sociaux</a></li>
-      <li><a href="">Mobile</a></li>
+     <li><a href="web.php" class="text-categorie">Web</a></li>
+      <li><a href="ia.php">Intelligence Artificielle</a></li>
+      <li><a href="reseaux.php">Reseaux sociaux</a></li>
+      <li><a href="mobile.php">Mobile</a></li>
      </ul>
       </div>
     </div>
