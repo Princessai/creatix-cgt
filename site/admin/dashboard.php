@@ -19,34 +19,39 @@
       </div>
       <div class="col-sm-3" id="cote">
 
+   <a href="">TABLEAU DE BORD</a>
 
-        <div>
-
-          <a href="">TABLEAU DE BORD</a>
-
-          <ul>
-
-            <li>
-
-              <a href="dashboard.php">Admin</a>
-
-            </li>
-            <li>
-              <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Categories
-                </button>
-                <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" type="button">DIGITALE</button></li>
-                  <li><button class="dropdown-item" type="button">IA</button></li>
-                  <li><button class="dropdown-item" type="button">MARKETING</button></li>
-                  <li><button class="dropdown-item" type="button">METAVERSE</button></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
+   <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+       CATEGORIES
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+     <ul >
+      <li><a href="" class="text-categorie">Web</a></li>
+      <li><a href="">Intelligence Artificielle</a></li>
+      <li><a href="">Reseaux sociaux</a></li>
+      <li><a href="">Mobile</a></li>
+     </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+       ADMINS
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        
+      </div>
+    </div>
+  </div>
+</div>
       </div>
       <div class="col-sm-9" id="">
         <div class="cont">
