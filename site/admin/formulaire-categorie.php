@@ -35,9 +35,16 @@
                             <div class="accordion-body">
                                 <ul>
                                     <li><a href="web.php" class="text-categorie">Web</a></li>
+                                    <hr>
                                     <li><a href="ia.php">Intelligence Artificielle</a></li>
+                                    <hr>
                                     <li><a href="reseaux.php">Reseaux sociaux</a></li>
+                                    <hr>
                                     <li><a href="mobile.php">Mobile</a></li>
+                                    <hr>
+                                    <li> <button type="button" class="btn menu-button"><a href="creer-categorie.php">AJOUTER</a></button>
+                  </li>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -67,8 +74,7 @@
                                 <form action="" method="POST" class="ajout-form">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">TITRE</label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        >
+                                        <input type="email" class="form-control" id="exampleFormControlInput1">
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">DESCRIPTION
@@ -78,9 +84,9 @@
                                     </div>
 
                                     <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label"> IMAGE
+                                        <label for="exampleFormControlTextarea1" class="form-label"> IMAGE
                                         </label> <br>
-                                          <input type="file">
+                                        <input type="file">
                                     </div>
 
                                     <div class="mb-3">

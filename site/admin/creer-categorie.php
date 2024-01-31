@@ -7,17 +7,18 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style-admin.css">
 
 </head>
+<link rel="stylesheet" href="css/style-admin.css">
 
 <body>
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12" id="haut-page">
-                <span class="nom-blog">TECHNOBLOG</span> <span>bienvenue, admin</span>
+                <span style="font-family: Provicali;font-size: 21px;">TECHNOBLOG</span> <span>bienvenue, admin</span>
             </div>
             <div class="col-sm-3" id="cote">
+
 
                 <a href="dashboard.php">TABLEAU DE BORD</a>
 
@@ -27,13 +28,13 @@
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                                 aria-controls="panelsStayOpen-collapseOne">
-                                CATEGORIES <span>(...)</span>
+                                CATEGORIES
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                             <div class="accordion-body">
                                 <ul>
-                                <li><a href="web.php" class="text-categorie">Web</a></li>
+                                    <li><a href="web.php" class="text-categorie">Web</a></li>
                                     <hr>
                                     <li><a href="ia.php">Intelligence Artificielle</a></li>
                                     <hr>
@@ -62,42 +63,19 @@
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="col-sm-9" id="">
                 <div class="cont">
                     <div class="container text-center">
                         <div class="row">
                             <div class="col-sm-12">
-                                <p style="  font-size: 36px;text-align: start ;">CATEGORIE: WEB</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p style=" text-align: start ;">tous(...)</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <button type="button" class="btn btn-light"><a
-                                        href="formulaire-categorie.php">AJOUTER</a></button>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="article d-flex">
-                                    <div class="container text-center">
-                                        <div class="row article-box" >
-                                            <div class="col-sm-3">
-                                                <img src="images/exemple.png" width="70%"  alt="image article">
-                                            </div>
-                                            <div class="col-sm-6">
-                                              <hgroup class="titre-date">
-                                                <h5>TITRE</h5>
-                                                <h6>Date de publication</h6>
-                                              </hgroup>
-                                            </div>
-                                            <div class="col-sm-3">
-                                             <a href="" class="modifier">MODIFIER</a>
-                                             <a href="" class="suprimer">SUPRIMER</a>
-                                             <a href="" class="voir">VOIR</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <form action="" method="POST" class="ajout-form">
+                                    <h4 style="text-align: start ;">AJOUTER UNE CATEGORIE</h4>
+                                    <input type="text" placeholder="NOM">
+                                    
+                                    <input type="submit">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -105,7 +83,7 @@
 
                 </div>
 
-            </div>
+            </div>dashboard.php
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

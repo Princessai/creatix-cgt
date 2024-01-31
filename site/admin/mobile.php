@@ -32,9 +32,15 @@
       <div class="accordion-body">
      <ul >
      <li><a href="web.php" class="text-categorie">Web</a></li>
-      <li><a href="ia.php">Intelligence Artificielle</a></li>
-      <li><a href="reseaux.php">Reseaux sociaux</a></li>
-      <li><a href="mobile.php">Mobile</a></li>
+                                    <hr>
+                                    <li><a href="ia.php">Intelligence Artificielle</a></li>
+                                    <hr>
+                                    <li><a href="reseaux.php">Reseaux sociaux</a></li>
+                                    <hr>
+                                    <li><a href="mobile.php">Mobile</a></li>
+                                    <hr>
+                                    <li> <button type="button" class="btn menu-button"><a href="creer-categorie.php">AJOUTER</a></button>
+                  </li>
      </ul>
       </div>
     </div>
