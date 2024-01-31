@@ -19,7 +19,7 @@
       
       <div class="col-sm-3" id="cote">
 
-   <a href="">TABLEAU DE BORD</a>
+   <a class="dashboardName" href="">TABLEAU DE BORD</a>
 
    <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
@@ -64,16 +64,16 @@
                 <p style=" text-align: start ;">tous(...)</p>
               </div>
               <div class="col-sm-6">
-                <button type="button" class="btn btn-light"><a href="formulaire.php">AJOUTER</a></button>
+                <button type="button" class="btn btn-light"><a href="formulaire-admin.php">AJOUTER</a></button>
               </div>
               <div class="col-sm-12">
-                <div class="admin">
+                <div class="admin-card">
                   <span>NOM</span> <span>STATUT</span> <span>DATE</span>
                 </div>
-                <div class="admin">
+                <div class="admin-card">
                   <span>NOM</span> <span>STATUT</span> <span>DATE</span>
                 </div>
-                <div class="admin">
+                <div class="admin-card">
                   <span>NOM</span> <span>STATUT</span> <span>DATE</span>
                 </div>
 
