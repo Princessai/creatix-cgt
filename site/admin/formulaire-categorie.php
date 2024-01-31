@@ -65,11 +65,27 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <form action="" method="POST" class="ajout-form">
-                                    <h4 style="text-align: start ;">AJOUTER UN ADMIN</h4>
-                                    <input type="text" placeholder="NOM">
-                                    <input type="text" placeholder="EMAIL">
-                                    <input type="text" placeholder="MOT DE PASSE">
-                                    <input type="submit">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">TITRE</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        >
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">DESCRIPTION
+                                        </label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                            rows="3"></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label"> IMAGE
+                                        </label> <br>
+                                          <input type="file">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <button type="submit" class="btn btn-secondary mb-3">AJOUTER</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
