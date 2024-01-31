@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Provicali;
+    src: url(/site/admin/fonts/Provicali.otf);
+}
+
+@font-face {
+    font-family: Monserrat;
+    src: url(/site/admin/fonts/Montserrat-Medium.otf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -100,4 +110,9 @@ input[type="submit"]{
    
     width: 20%;
 
+}
+
+.nom-blog{
+    font-family: Provicali;
+    font-size: 21px;
 }
