@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: gainsboro;
@@ -15,7 +15,7 @@ body{
     transform: translate(-50%, -50%);
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: gainsboro;
@@ -23,12 +23,12 @@ body{
 
 
 
-li{
+li {
     list-style-type: none;
-     margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
-ul{
+ul {
     padding-top: 15px;
     background-color: #277CCE;
     margin-top: 20px;
@@ -37,38 +37,67 @@ ul{
 
 
 
-a{
-text-decoration: none;
-color: white;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-button{
+button {
     width: 200px;
 }
 
 
-#haut-page{
- background-color: #2988E3;
- height: 60px;
- color: white;
- display: flex;
- align-items: center;
- justify-content: space-between;
+#haut-page {
+    background-color: #2988E3;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
-#cote{
+#cote {
     background-color: #2988E3;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: 900px;
-   }
+}
 
-   .cont{
+.cont {
+
+    width: 1000px;
+    margin: auto;
+
+    padding-top: 80px;
+}
+
+.admin{
+    width: 800px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid gray;
+    background-color: white;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.ajout-form {
+    display: flex;
+    flex-direction: column;
     
-   width: 1200px;
-   margin: auto;
+}
 
-   padding-top: 80px;
-   }
+input[type="text"]{
+    margin: 15px 0;   
+    padding: 10px 5px;
+    width: 40%;
 
+}
+
+input[type="submit"]{
+   
+    width: 20%;
+
+}
