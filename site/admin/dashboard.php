@@ -15,43 +15,47 @@
   <div class="container-fluid text-center">
     <div class="row">
       <div class="col-sm-12" id="haut-page">
-        <span class="nom-blog" >TECHNOBLOG</span> <span>bienvenue, admin</span>
+        <span class="nom-blog">TECHNOBLOG</span> <span>bienvenue, admin</span>
       </div>
       <div class="col-sm-3" id="cote">
 
-   <a href="">TABLEAU DE BORD</a>
+        <a href="dashboard.php">TABLEAU DE BORD</a>
 
-   <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-       CATEGORIES
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-      <div class="accordion-body">
-     <ul >
-      <li><a href="" class="text-categorie">Web</a></li>
-      <li><a href="">Intelligence Artificielle</a></li>
-      <li><a href="">Reseaux sociaux</a></li>
-      <li><a href="">Mobile</a></li>
-     </ul>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-       ADMINS
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-      <div class="accordion-body">
-        
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne">
+                CATEGORIES
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                <ul>
+                  <li><a href="web.php" class="text-categorie">Web</a></li>
+                  <li><a href="ia.php">Intelligence Artificielle</a></li>
+                  <li><a href="reseaux.php">Reseaux sociaux</a></li>
+                  <li><a href="mobile.php">Mobile</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                ADMINS
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-sm-9" id="">
         <div class="cont">
