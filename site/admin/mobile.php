@@ -19,7 +19,7 @@
       </div>
       <div class="col-sm-3" id="cote">
 
-   <a href="dashboard.php">TABLEAU DE BORD</a>
+   <a class="dashboardName" href="dashboard.php">TABLEAU DE BORD</a>
 
    <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
