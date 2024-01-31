@@ -4,6 +4,23 @@ body{
     background-color: gainsboro;
 }
 
+.connexionForm {
+    width: fit-content;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+}
+
 
 
 li{
@@ -30,13 +47,6 @@ button{
 }
 
 
-
-
-
-
-
-
-
 #haut-page{
  background-color: #2988E3;
  height: 60px;
@@ -61,4 +71,3 @@ button{
 
    padding-top: 80px;
    }
-
