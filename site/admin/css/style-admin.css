@@ -168,6 +168,7 @@ border: none;
 .menu-button{
     color: white;
     background-color: #2988E3;
+    width: 100%;
     
 }
 .menu-button:hover {
