@@ -20,33 +20,44 @@
             <div class="col-sm-3" id="cote">
 
 
-                <div>
+                <a href="">TABLEAU DE BORD</a>
 
-                    <a href="">TABLEAU DE BORD</a>
-
-                    <ul>
-
-                        <li>
-
-                            <a href="dashboard.php">Admin</a>
-
-                        </li>
-                        <li>
-                            <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Categories
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><button class="dropdown-item" type="button">DIGITALE</button></li>
-                                    <li><button class="dropdown-item" type="button">IA</button></li>
-                                    <li><button class="dropdown-item" type="button">MARKETING</button></li>
-                                    <li><button class="dropdown-item" type="button">METAVERSE</button></li>
+                <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                CATEGORIES
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="web.php" class="text-categorie">Web</a></li>
+                                    <li><a href="ia.php">Intelligence Artificielle</a></li>
+                                    <li><a href="reseaux.php">Reseaux sociaux</a></li>
+                                    <li><a href="mobile.php">Mobile</a></li>
                                 </ul>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                ADMINS
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div class="col-sm-9" id="">
                 <div class="cont">
@@ -70,7 +81,9 @@
             </div>dashboard.php
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
