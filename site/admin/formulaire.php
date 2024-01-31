@@ -25,7 +25,7 @@
 
         <li>
        
-        <a href="dashboard.php">Admin</a>
+        <a href="">Admin</a>
 
         </li>
         <li>
@@ -49,25 +49,13 @@
         <div class="container text-center">
   <div class="row">
     <div class="col-sm-12">
-      <p style="  font-size: 36px;text-align: start ;">ADMIN</p>
-    </div>
-    <div class="col-sm-6">
-       <p style=" text-align: start ;">tous(...)</p>
-    </div>
-    <div class="col-sm-6">
-    <button type="button" class="btn btn-light"><a href="formulaire.php">AJOUTER</a></button>
-    </div>
-    <div class="col-sm-12">             
-      <div class="admin">
-       <span>NOM</span>  <span>STATUT</span>  <span>DATE</span> 
-      </div>
-      <div class="admin">
-       <span>NOM</span>  <span>STATUT</span>  <span>DATE</span> 
-      </div>
-      <div class="admin">
-       <span>NOM</span>  <span>STATUT</span>  <span>DATE</span> 
-      </div>
-  
+     <form action="" method="POST" >
+        <h4 style="text-align: start ;">AJOUTER UN ADMIN</h4>
+        <input type="text" placeholder="NOM"> <br>
+        <input type="text" placeholder="EMAIL"><br>
+        <input type="text" placeholder="MOT DE PASSE"><br>
+        <input type="submit" >
+     </form>
     </div>
   </div>
 </div>
