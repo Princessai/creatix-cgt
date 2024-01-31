@@ -1,11 +1,11 @@
 @font-face {
     font-family: Provicali;
-    src: url(/site/admin/fonts/Provicali.otf);
+    src: url(site/admin/fonts/Provicali.otf);
 }
 
 @font-face {
     font-family: Monserrat;
-    src: url(/site/admin/fonts/Montserrat-Medium.otf);
+    src: url(site/admin/fonts/Montserrat-Medium.ttf);
 }
 
 body {
@@ -113,6 +113,6 @@ input[type="submit"]{
 }
 
 .nom-blog{
-    font-family: Provicali;
+    font-family: Provicali, sans-serif;
     font-size: 21px;
 }
