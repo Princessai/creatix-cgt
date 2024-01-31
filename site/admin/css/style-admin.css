@@ -4,6 +4,23 @@ body{
     background-color: gainsboro;
 }
 
+.connexionForm {
+    width: fit-content;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+}
+
 
 
 li{
@@ -28,13 +45,6 @@ color: white;
 button{
     width: 200px;
 }
-
-
-
-
-
-
-
 
 
 #haut-page{
@@ -62,21 +72,3 @@ button{
    padding-top: 80px;
    }
 
-   .admin{
-    width: 1000px;
-    height: 65px;
-    border: 1px solid gray;
-    background-color: white;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: Montserrat;
-    font-size: 14px;
-   }
-
-
-   form{
-    display: flex ;
-    flex-direction: column;
-   }
