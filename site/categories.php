@@ -60,23 +60,23 @@
 
     <p><strong>Top catégorie </strong> <p>
         <br>
-    <h6>cdfe</h6>
+    <h6>Lorem ipsum dolor sit amet, </h6>
         <br>
-        <h6>cdfe</h6>
+        <h6>Lorem ipsum dolor </h6>
         <br>
-        <h6>cdfe</h6>
+        <h6>Lorem ipsum dolor </h6>
         <br>
-        <h6>cdfe</h6>
+        <h6>Lorem ipsum dolor </h6>
         <br>
-        <h6>cdfe</h6>
+        <h6>Lorem ipsum dolor </h6>
         <br>
-        <h6>cdfe</h6>
+        <h6>Lorem ipsum dolor </h6>
         <br>
-        <h6>cdfe</h6>
+        <h6>Lorem ipsum dolor </h6>
         <br>
-        <h6>cdfe</h6>
+        <h6>Lorem ipsum dolor </h6>
         <br>
-        <h6>cdfe</h6>
+        <h6>Lorem ipsum dolor </h6>
         <br>
     </div>
     </div>

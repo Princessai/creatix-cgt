@@ -41,7 +41,12 @@
                                     <hr>
                                     <li><a href="mobile.php">Mobile</a></li>
                                     <hr>
-                                    <li> <button type="button" class="btn menu-button"><a href="creer-categorie.php">AJOUTER</a></button>
+                                    <li> <button type="button" class="btn menu-button"><a href="creer-categorie.php">AJOUTER</a>
+                                
+                                
+                                
+                                
+                                </button>
                   </li>
                                 </ul>
                             </div>
