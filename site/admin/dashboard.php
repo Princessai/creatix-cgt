@@ -104,6 +104,7 @@ $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
                     <thead>
                       <tr>
                         <th scope="col">Nom</th>
+                        <th scope="col">Prénom</th>
                         <th scope="col">Email</th>
                       </tr>
                     </thead>
@@ -112,6 +113,7 @@ $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
                             
                       <tr>
                         <td><?php echo $row['nom'];    ?></td>
+                        <td><?php echo $row['prenom'];    ?></td>
                         <td><?php echo $row['email'];   ?></td>
                       </tr>
                       <?php endforeach;?> 
