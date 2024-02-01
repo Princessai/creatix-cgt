@@ -1,3 +1,29 @@
+<?php
+
+
+// if (!$_SESSION['admin_name']) {
+//  header('location:connexion.php');
+// }
+$conn2 = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
+
+$sql2 = "SELECT * FROM articles";
+
+$rearticle = $conn2->prepare($sql2);
+
+$rearticle->execute();
+
+$exe2 = $rearticle->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +59,7 @@
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                             <div class="accordion-body">
                                 <ul>
-                                <li><a href="web.php" class="text-categorie">Web</a></li>
+                                <li><a href="web.php" class="text-categorie">Articles</a></li>
                                     <hr>
                                     <li><a href="ia.php">Intelligence Artificielle</a></li>
                                     <hr>
@@ -68,7 +94,7 @@
                     <div class="container text-center">
                         <div class="row">
                             <div class="col-sm-12">
-                                <p style="  font-size: 36px;text-align: start ;">CATEGORIE: WEB</p>
+                                <p style="  font-size: 36px;text-align: start ;">TOUS LES ARTICLES</p>
                             </div>
                             <div class="col-sm-6">
                                 <p style=" text-align: start ;">tous(...)</p>
@@ -78,26 +104,33 @@
                                         href="formulaire-article.php">AJOUTER</a></button>
                             </div>
                             <div class="col-sm-12">
+
+                                  <?php foreach ($exe2 as $row):  ?>
+                                    
+            
                                 <div class="article d-flex">
                                     <div class="container text-center">
                                         <div class="row article-box" >
                                             <div class="col-sm-3">
-                                                <img src="images/exemple.png" width="70%"  alt="image article">
+                                                
+                                                <img src="<?= $row['image'] ?>" width="70%"  alt="image article">
                                             </div>
                                             <div class="col-sm-6">
                                               <hgroup class="titre-date">
-                                                <h5>TITRE</h5>
-                                                <h6>Date de publication</h6>
+                                                <h5> <?= $row['titre'] ?></h5>
+                                                <h6><?= $row['date_public'] ?></h6>
                                               </hgroup>
                                             </div>
                                             <div class="col-sm-3">
-                                             <a href="" class="modifier">MODIFIER</a>
-                                             <a href="" class="suprimer">SUPRIMER</a>
+                                             <a href="" >MODIFIER</a href="" >
+                                             <button class="suprimer" onsubmit=<?php ?>>SUPRIMER</button>
                                              <a href="" class="voir">VOIR</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
@@ -114,3 +147,5 @@
 </body>
 
 </html>
+
+
