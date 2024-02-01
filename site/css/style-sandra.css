@@ -1,15 +1,4 @@
-/* .tr{
-    border: 3px solid;
-    margin-left: 300px;
-    
-    }
-    .td{
-    width: 400px;
-    height: 500px;
-    text-align: center;
-    border: 1px solid;
-    
-    } */
+
 
     table {
         width: 500px;
@@ -26,7 +15,7 @@
 
     .container-categorie {
         display: flex;
-        justify-content: space-between; /* ou d'autres valeurs comme 'flex-start', 'flex-end', 'center' */
+        justify-content: space-between; 
     }
 
     .box {

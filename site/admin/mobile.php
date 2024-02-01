@@ -15,7 +15,10 @@
   <div class="container-fluid text-center">
     <div class="row">
       <div class="col-sm-12" id="haut-page">
-        <span class="nom-blog" >TECHNOBLOG</span> <span>bienvenue, admin</span>
+        <span class="nom-blog" >TECHNOBLOG</span> <span>bienvenue, admin
+         
+        </span>
+       
       </div>
       <div class="col-sm-3" id="cote">
 
