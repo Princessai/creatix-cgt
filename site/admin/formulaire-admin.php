@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
                                 <form action="" method="POST" class="ajout-form">
                                     <h4 style="text-align: start ;">AJOUTER UN ADMIN</h4>
                                     <input type="text" placeholder="Nom" name="nom">
-                                    <input type="text" placeholder="Prénom" name="nom">
+                                    <input type="text" placeholder="Prénom" name="prenom">
                                     <input type="text" placeholder="Email" name="email">
                                     <input type="text" placeholder="Mot de passe" name="password">
                                     <input type="submit" name="submit">
