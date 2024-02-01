@@ -1,4 +1,20 @@
 <?php
+
+
+// if (!$_SESSION['admin_name']) {
+//  header('location:connexion.php');
+// }
+$conn2 = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
+
+$sql2 = "SELECT * FROM articles";
+
+$rearticle = $conn2->prepare($sql2);
+
+$rearticle->execute();
+
+$exe2 = $rearticle->fetchAll(PDO::FETCH_ASSOC);
+
+
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $sql = "SELECT * FROM categories WHERE id=" . $_GET['id'];
@@ -10,10 +26,15 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
 ?>
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technoblog - <?= $categorie["nom"] ?> </title>
@@ -100,26 +121,33 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                 <button type="button" class="btn btn-light"><a href="formulaire-article.php">AJOUTER</a></button>
                             </div>
                             <div class="col-sm-12">
+
+                                  <?php foreach ($exe2 as $row):  ?>
+                                    
+            
                                 <div class="article d-flex">
                                     <div class="container text-center">
                                         <div class="row article-box">
                                             <div class="col-sm-3">
-                                                <img src="images/exemple.png" width="70%" alt="image article">
+                                                
+                                                <img src="<?= $row['image'] ?>" width="70%"  alt="image article">
                                             </div>
                                             <div class="col-sm-6">
-                                                <hgroup class="titre-date">
-                                                    <h5>TITRE</h5>
-                                                    <h6>Date de publication</h6>
-                                                </hgroup>
+                                              <hgroup class="titre-date">
+                                                <h5> <?= $row['titre'] ?></h5>
+                                                <h6><?= $row['date_public'] ?></h6>
+                                              </hgroup>
                                             </div>
                                             <div class="col-sm-3">
-                                                <a href="" class="modifier">MODIFIER</a>
-                                                <a href="" class="suprimer">SUPRIMER</a>
-                                                <a href="" class="voir">VOIR</a>
+                                             <a href="" >MODIFIER</a href="" >
+                                             <button class="suprimer" onsubmit=<?php ?>>SUPRIMER</button>
+                                             <a href="" class="voir">VOIR</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
