@@ -4,9 +4,9 @@
 // if (!$_SESSION['admin_name']) {
 //  header('location:connexion.php');
 // }
-$conn = new PDO('mysql:host=localhost;dbname=dashboard', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
 
-$sql1="SELECT * FROM admine";
+$sql1="SELECT * FROM admin";
 
 $readmin = $conn->prepare($sql1);
 
@@ -112,7 +112,7 @@ $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
                             
                       <tr>
                         <td><?php echo $row['nom'];    ?></td>
-                        <td><?php echo $row['mail'];   ?></td>
+                        <td><?php echo $row['email'];   ?></td>
                       </tr>
                       <?php endforeach;?> 
                     </tbody>

@@ -75,7 +75,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <button type="button" class="btn btn-light"><a
-                                        href="formulaire-categorie.php">AJOUTER</a></button>
+                                        href="formulaire-article.php">AJOUTER</a></button>
                             </div>
                             <div class="col-sm-12">
                                 <div class="article d-flex">

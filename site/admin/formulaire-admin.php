@@ -2,16 +2,16 @@
 <?php 
 
 
-$conn = new PDO('mysql:host=localhost;dbname=dashboard', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
 
 
 if ($_POST['submit']) {
    $nom = $_POST['nom'];
-   $mail  = $_POST['mail'];
+   $mail  = $_POST['email'];
    $mdp = $_POST['password'];
 }
 
-$req = "INSERT INTO admine VALUES('', '$nom','$mail','$mdp')";
+$req = "INSERT INTO admin VALUES('', '$nom','$mail','$mdp')";
 $exe = $conn->prepare($req);
 $exe->execute();
 ?>
@@ -93,7 +93,7 @@ $exe->execute();
                                 <form action="" method="POST" class="ajout-form">
                                     <h4 style="text-align: start ;">AJOUTER UN ADMIN</h4>
                                     <input type="text" placeholder="NOM" name="nom">
-                                    <input type="text" placeholder="EMAIL" name="mail">
+                                    <input type="text" placeholder="EMAIL" name="email">
                                     <input type="text" placeholder="MOT DE PASSE" name="password">
                                     <input type="submit" name="submit" >
                                 </form>
