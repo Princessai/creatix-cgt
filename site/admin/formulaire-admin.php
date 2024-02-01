@@ -1,4 +1,24 @@
-<!DOCTYPE html>
+
+<?php 
+
+
+$conn = new PDO('mysql:host=localhost;dbname=dashboard', 'root', '');
+
+
+if ($_POST['submit']) {
+   $nom = $_POST['nom'];
+   $mail  = $_POST['mail'];
+   $mdp = $_POST['password'];
+}
+
+$req = "INSERT INTO admine VALUES('', '$nom','$mail','$mdp')";
+$exe = $conn->prepare($req);
+$exe->execute();
+?>
+
+
+
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -72,10 +92,10 @@
                             <div class="col-sm-12">
                                 <form action="" method="POST" class="ajout-form">
                                     <h4 style="text-align: start ;">AJOUTER UN ADMIN</h4>
-                                    <input type="text" placeholder="NOM">
-                                    <input type="text" placeholder="EMAIL">
-                                    <input type="text" placeholder="MOT DE PASSE">
-                                    <input type="submit">
+                                    <input type="text" placeholder="NOM" name="nom">
+                                    <input type="text" placeholder="EMAIL" name="mail">
+                                    <input type="text" placeholder="MOT DE PASSE" name="password">
+                                    <input type="submit" name="submit" >
                                 </form>
                             </div>
                         </div>

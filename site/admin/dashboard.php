@@ -1,3 +1,24 @@
+<?php 
+
+
+// if (!$_SESSION['admin_name']) {
+//  header('location:connexion.php');
+// }
+$conn = new PDO('mysql:host=localhost;dbname=dashboard', 'root', '');
+
+$sql1="SELECT * FROM admine";
+
+$readmin = $conn->prepare($sql1);
+
+$readmin->execute();
+
+$exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +41,7 @@
 
       <div class="col-sm-3" id="cote">
 
-   <a class="dashboardName" href="dashboard.php">TABLEAU DE BORD</a>
+        <a class="dashboardName" href="dashboard.php">TABLEAU DE BORD</a>
 
         <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
@@ -77,15 +98,25 @@
               <div class="col-sm-6">
                 <button type="button" class="btn btn-light"><a href="formulaire-admin.php">AJOUTER</a></button>
               </div>
-              <div class="col-sm-12">
+              <div class="col-sm-12 mt-5">
                 <div class="admin-card">
-                  <span>NOM</span> <span>STATUT</span> <span>DATE</span>
-                </div>
-                <div class="admin-card">
-                  <span>NOM</span> <span>STATUT</span> <span>DATE</span>
-                </div>
-                <div class="admin-card">
-                  <span>NOM</span> <span>STATUT</span> <span>DATE</span>
+                  <table class="table ">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                             <?php foreach ($exe1 as $row ) :  ?> 
+                            
+                      <tr>
+                        <td><?php echo $row['nom'];    ?></td>
+                        <td><?php echo $row['mail'];   ?></td>
+                      </tr>
+                      <?php endforeach;?> 
+                    </tbody>
+                  </table>
                 </div>
 
               </div>
