@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD:site/admin/web.php
 
 
 // if (!$_SESSION['admin_name']) {
@@ -16,16 +15,6 @@ $rearticle->execute();
 $exe2 = $rearticle->fetchAll(PDO::FETCH_ASSOC);
 
 
-
-?>
-
-
-
-
-
-
-
-=======
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $sql = "SELECT * FROM categories WHERE id=" . $_GET['id'];
@@ -37,11 +26,15 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
 ?>
 
->>>>>>> 6583a63fa97a5f82745239e577c312c3bef2091a:site/admin/categorie.php
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technoblog - <?= $categorie["nom"] ?> </title>
@@ -74,17 +67,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                             <div class="accordion-body">
                                 <ul>
-<<<<<<< HEAD:site/admin/web.php
-                                <li><a href="web.php" class="text-categorie">Articles</a></li>
-                                    <hr>
-                                    <li><a href="ia.php">Intelligence Artificielle</a></li>
-                                    <hr>
-                                    <li><a href="reseaux.php">Reseaux sociaux</a></li>
-                                    <hr>
-                                    <li><a href="mobile.php">Mobile</a></li>
-=======
                                     <li><a href="dashboard.php" class="text-categorie">Toutes les catégories</a></li>
->>>>>>> 6583a63fa97a5f82745239e577c312c3bef2091a:site/admin/categorie.php
                                     <hr>
 
                                     <?php
@@ -127,11 +110,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     <div class="container text-center">
                         <div class="row">
                             <div class="col-sm-12">
-<<<<<<< HEAD:site/admin/web.php
-                                <p style="  font-size: 36px;text-align: start ;">TOUS LES ARTICLES</p>
-=======
                                 <p style="  font-size: 36px;text-align: start ;">CATEGORIE: <?= $categorie["nom"] ?></p>
->>>>>>> 6583a63fa97a5f82745239e577c312c3bef2091a:site/admin/categorie.php
                             </div>
                             <div class="col-sm-6">
                                 <p style=" text-align: start ;">tous(...)</p>
@@ -148,7 +127,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                     <div class="container text-center">
                                         <div class="row article-box">
                                             <div class="col-sm-3">
-<<<<<<< HEAD:site/admin/web.php
                                                 
                                                 <img src="<?= $row['image'] ?>" width="70%"  alt="image article">
                                             </div>
@@ -162,20 +140,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                              <a href="" >MODIFIER</a href="" >
                                              <button class="suprimer" onsubmit=<?php ?>>SUPRIMER</button>
                                              <a href="" class="voir">VOIR</a>
-=======
-                                                <img src="images/exemple.png" width="70%" alt="image article">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <hgroup class="titre-date">
-                                                    <h5>TITRE</h5>
-                                                    <h6>Date de publication</h6>
-                                                </hgroup>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <a href="" class="modifier">MODIFIER</a>
-                                                <a href="" class="suprimer">SUPRIMER</a>
-                                                <a href="" class="voir">VOIR</a>
->>>>>>> 6583a63fa97a5f82745239e577c312c3bef2091a:site/admin/categorie.php
                                             </div>
                                         </div>
                                     </div>
@@ -191,11 +155,5 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
             </div>
 
-<<<<<<< HEAD:site/admin/web.php
-</html>
-
-
-=======
 
             <?php require_once(__DIR__ . '/dashboard-footer.php') ?>
->>>>>>> 6583a63fa97a5f82745239e577c312c3bef2091a:site/admin/categorie.php
