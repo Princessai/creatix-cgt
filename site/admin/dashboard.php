@@ -16,7 +16,7 @@
       <div class="col-sm-12" id="haut-page">
         <span class="nom-blog">TECHNOBLOG</span> <span>bienvenue, admin
 <!-- Bouton de connexion -->
-<button type="submit" class="button" />deconnection</button>
+<a href="connexion.php"><button type="submit" class="button" >  deconnexion</button></a>
 
 
         </span>
