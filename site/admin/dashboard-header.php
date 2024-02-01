@@ -64,7 +64,9 @@
                         </h2>
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                             <div class="accordion-body">
-
+                                    <ul>
+                                        <li><a href="admins.php">Tous les administrateurs</a></li>
+                                    </ul>
                             </div>
                         </div>
                     </div>
