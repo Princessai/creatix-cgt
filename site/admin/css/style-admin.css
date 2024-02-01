@@ -183,9 +183,9 @@ border: none;
 
 .button{
     border-radius: 10px;
-    width: 150px;
-    height: 40px;
+    padding: 10px 40px;
     border: none;
     color: #2988E3;
     margin-left: 10px;
+    background-color: #fff;
 }

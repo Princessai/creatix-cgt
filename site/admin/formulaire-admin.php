@@ -6,13 +6,13 @@ $conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
 
 if (isset($_POST['submit'])) {
     $nom = $_POST['nom'];
-    $nom = $_POST['prenom'];
+    $prenom = $_POST['prenom'];
     $mail  = $_POST['email'];
     $mdp = $_POST['password'];
     $date_creation = date("Y-m-d H:i:s");
 
 
-    $req = "INSERT INTO admin VALUES( '$nom','$prenom','$mail','$mdp', '$date_creation')";
+    $req = "INSERT INTO admin VALUES('', '$nom','$prenom','$mail','$mdp', '$date_creation')";
     $exe = $conn->prepare($req);
     $exe->execute();
 }
