@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +18,7 @@
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12" id="haut-page">
-                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, admin
+                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, <?=  $_SESSION['prenom']." ". $_SESSION['nom'] ?>
                     <!-- Bouton de connexion -->
                     <a href="connexion.php" class="button"> Deconnexion</a>
                 </span>
