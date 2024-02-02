@@ -42,6 +42,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         </div>
         <div class="col-sm-6">
           <button type="button" class="btn btn-light"><a href="formulaire-article.php">AJOUTER</a></button>
+          <button type="button" class="btn btn-light"><a href="suprimer-article.php">SUPRIMER</a></button>
         </div>
         <div class="col-sm-12">
 
