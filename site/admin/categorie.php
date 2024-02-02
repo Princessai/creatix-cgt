@@ -55,7 +55,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, <?php
                 if(isset($_SESSION['prenom'], $_SESSION['nom'])){
                     echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ;
-                } 
+                } else {
+                    echo 'admin';
+                }
                  ?>
                     <!-- Bouton de connexion -->
                     <a href="connexion.php" class="button"> Deconnexion</a>
