@@ -1,6 +1,5 @@
 <?php
 
-
 // if (!$_SESSION['admin_name']) {
 //  header('location:connexion.php');
 // }
@@ -33,18 +32,35 @@ $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="col-sm-12 mt-5">
           <div class="admin-card">
+
+ 
+           <?php 
+                if (!empty($_SESSION['erreur'])) {
+                  echo '<div class="alert alert-danger" role="alert">
+                  '.$_SESSION['erreur'].'
+                </div>';
+                $_SESSION['erreur'] = "";
+                }
+           
+           ?>
+
             <table class="table ">
               <thead>
                 <tr>
+                  <th scope="col">  Id</th>
                   <th scope="col">Nom</th>
                   <th scope="col">Prénom</th>
                   <th scope="col">Email</th>
+                  <th  scope="col">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 <?php foreach ($exe1 as $row) : ?>
 
                   <tr>
+                  <td>
+                      <?php echo $row['id']; ?>
+                    </td>
                     <td>
                       <?php echo $row['nom']; ?>
                     </td>
@@ -53,6 +69,11 @@ $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
                     </td>
                     <td>
                       <?php echo $row['email']; ?>
+                    </td>
+                    <td>
+                      <a href="voir.php?id=<?= $row['id'] ?>"> VOIR</a>
+                      <a href="edit.php?id=<?= $row['id'] ?>"> MODIFIER</a>
+                      <a href="delete.php?id=<?= $row['id'] ?>"> SUPRIMER</a>
                     </td>
                   </tr>
                 <?php endforeach; ?>
