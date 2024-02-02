@@ -7,11 +7,11 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if (isset($_POST['submit'])) {
-        $articleIds = [$_POST['titre']];
+        $articleIds = [$_POST['id']];
 
 
         foreach ($articleIds as $articleId) {
-            $sql = "DELETE FROM articles WHERE titre = :articleId";
+            $sql = "DELETE FROM articles WHERE id = :articleId";
             $query = $conn->prepare($sql);
             $query->bindParam(':articleId', $articleId, PDO::PARAM_INT);
             $query->execute();
@@ -44,7 +44,7 @@ try {
                 <div class="col-sm-12">
                     <form method="POST" action="">
                         <label for="id">Titre de l'élément à supprimer :</label>
-                        <input type="text" name="titre" required>
+                        <input type="text" name="id" required>
                         <button type="submit" name="submit">Supprimer</button>
                     </form>
                 </div>

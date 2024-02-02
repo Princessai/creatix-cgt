@@ -64,7 +64,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                   </div>
                   <div class="col-sm-3">
                     <a href="">MODIFIER</a href="">
-                    <button class="suprimer" onsubmit=<?php ?>>SUPRIMER</button>
+                   
                     <a href="" class="voir">VOIR</a>
                   </div>
                 </div>

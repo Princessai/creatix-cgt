@@ -1,4 +1,25 @@
 
+<?php
+
+
+$conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
+
+
+if (isset($_POST['submit'])) {
+    $titre = $_POST['titre'];
+    $contenu = $_POST['contenu'];
+    $image = $_POST['image'];
+   
+
+    $req = "INSERT INTO articles VALUES('','$titre','$image','$contenu','', '','')";
+    $exe = $conn->prepare($req);
+    $exe->execute();
+}
+
+?>
+
+
+
 <?php require_once(__DIR__ . '/dashboard-header.php') ?>
 
 <div class="col-sm-9" id="">
@@ -20,6 +41,6 @@
 
                 </div>
 
-            </div>dashboard.php
+            </div>
             
 <?php require_once(__DIR__ . '/dashboard-footer.php');?>

@@ -148,11 +148,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                     <hgroup class="titre-date">
                                                         <h5> <?= $row['titre'] ?></h5>
                                                         <h6><?= $row['date_public'] ?></h6>
+                                                        <h6><?= $row['id'] ?></h6>
                                                     </hgroup>
                                                 </div>
                                                 <div class="col-sm-3">
                                                     <a href="">MODIFIER</a href="">
-                                                    <button class="suprimer" onsubmit=<?php ?>>SUPRIMER</button>
+                                                   
                                                     <a href="" class="voir">VOIR</a>
                                                 </div>
                                             </div>
