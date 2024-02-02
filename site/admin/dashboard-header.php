@@ -18,7 +18,13 @@ session_start();
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12" id="haut-page">
-                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, <?=  $_SESSION['prenom']." ". $_SESSION['nom'] ?>
+                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, <?php
+                if(isset($_SESSION['prenom'], $_SESSION['nom'])){
+                    echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ;
+                } else {
+                    echo 'admin';
+                }
+                 ?>
                     <!-- Bouton de connexion -->
                     <a href="connexion.php" class="button"> Deconnexion</a>
                 </span>
