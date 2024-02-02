@@ -2,7 +2,6 @@
 session_start();
 
 
-
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     
     $sql = "SELECT * FROM categories WHERE id=" . $_GET['id'];
@@ -53,7 +52,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12" id="haut-page">
-                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, <?= $_SESSION['prenom'] . " " . $_SESSION['nom'] ?>
+                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, <?php
+                if(isset($_SESSION['prenom'], $_SESSION['nom']))
+                 $_SESSION['prenom'] . " " . $_SESSION['nom'] 
+                 ?>
                     <!-- Bouton de connexion -->
                     <a href="connexion.php" class="button"> Deconnexion</a>
                 </span>
