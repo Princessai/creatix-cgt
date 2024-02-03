@@ -3,24 +3,24 @@ session_start();
 
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
-    
+
     $sql = "SELECT * FROM categories WHERE id=" . $_GET['id'];
     $conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
     $request = $conn->prepare($sql);
     $request = $conn->query($sql);
     $categorie = $request->fetch();
-    
-    
+
+
     $conn2 = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
-    
+
     $sql2 = "SELECT * FROM articles WHERE categories_id=" . $_GET['id'];
-    
+
     $rearticle = $conn2->prepare($sql2);
-    
+
     $rearticle->execute();
-    
+
     $exe2 = $rearticle->fetchAll(PDO::FETCH_ASSOC);
-    
+
     // Requête SQL pour compter les articles de la catégorie spécifiée
     $req_nbr_articles = "SELECT COUNT(*) AS nombre_articles FROM articles WHERE categories_id = :categories_id";
     $req_article_count = $conn2->prepare($req_nbr_articles);
@@ -30,7 +30,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 }
 
 ?>
-
 
 
 
@@ -52,13 +51,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12" id="haut-page">
-                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, <?php
-                if(isset($_SESSION['prenom'], $_SESSION['nom'])){
-                    echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ;
-                } else {
-                    echo 'admin';
-                }
-                 ?>
+                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, 
+                    <?php
+                        if (isset($_SESSION['prenom'], $_SESSION['nom'])) {
+                            echo $_SESSION['prenom'] . " " . $_SESSION['nom'];
+                        } else {
+                            echo 'admin';
+                        }
+                    ?>
                     <!-- Bouton de connexion -->
                     <a href="connexion.php" class="button"> Deconnexion</a>
                 </span>
@@ -84,7 +84,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                     <?php
                                     $sql = "SELECT id, nom FROM categories";
 
-                                    $conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
                                     $request = $conn->query($sql);
 
                                     while ($data = $request->fetch()) {
@@ -141,8 +140,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                         <div class="container text-center">
                                             <div class="row article-box">
                                                 <div class="col-sm-3">
-
-                                                    <img src="<?= $row['image'] ?>" width="70%" alt="image article">
+                                                    <?php
+                                                    $req = $conn->query('SELECT image FROM articles');
+                                                    $data = $req->fetch();
+                                                        echo "<img src='./upload/" . $data['image'] . " width='70%' alt='image article'>";
+                                                    
+                                                    ?>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <hgroup class="titre-date">
@@ -153,7 +156,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                 </div>
                                                 <div class="col-sm-3">
                                                     <a href="">MODIFIER</a href="">
-                                                   
+
                                                     <a href="" class="voir">VOIR</a>
                                                 </div>
                                             </div>
