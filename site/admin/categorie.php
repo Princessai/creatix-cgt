@@ -156,9 +156,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                     </hgroup>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <a href="edit.php">MODIFIER</a href="">
+                                                    <a href="edit.php">MODIFIER</A>
 
-                                                    <a href="" class="voir">VOIR</a>
+                                                    <a href="oumou.php" class="voir">VOIR</a>
                                                 </div>
                                             </div>
                                         </div>
