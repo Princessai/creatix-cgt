@@ -1,4 +1,10 @@
 <?php
+require_once(__DIR__ . '/dashboard-header.php');
+
+if(!isset($_SESSION['password']) || empty($_SESSION['password'])) {
+  header('Location: connexion.php');
+}
+
 $conn2 = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
 
 $sql2 = "SELECT * FROM articles";
@@ -28,7 +34,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 ?>
 
 
-<?php require_once(__DIR__ . '/dashboard-header.php') ?>
 
 <div class="col-sm-9" id="">
   <div class="cont">

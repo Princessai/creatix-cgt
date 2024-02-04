@@ -74,7 +74,6 @@ button {
     background-color: #2988E3;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    height: 900px;
     padding-top: 50px;
 
 }
@@ -199,4 +198,8 @@ td {
     overflow: hidden;    /* Cache le texte qui dépasse la taille de la cellule */
     text-overflow: ellipsis; /* Ajoute des points de suspension (...) pour indiquer qu'il y a plus de texte */
     max-width: 300px;
+}
+
+.select-categorie {
+    width: 200px;
 }

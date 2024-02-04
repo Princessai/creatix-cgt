@@ -51,13 +51,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12" id="haut-page">
-                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue, 
+                <span class="nom-blog">TECHNOBLOG</span> <span>Bienvenue,
                     <?php
-                        if (isset($_SESSION['prenom'], $_SESSION['nom'])) {
-                            echo $_SESSION['prenom'] . " " . $_SESSION['nom'];
-                        } else {
-                            echo 'admin';
-                        }
+                    if (isset($_SESSION['prenom'], $_SESSION['nom'])) {
+                        echo $_SESSION['prenom'] . " " . $_SESSION['nom'];
+                    } else {
+                        echo 'admin';
+                    }
                     ?>
                     <!-- Bouton de connexion -->
                     <a href="connexion.php" class="button"> Deconnexion</a>
@@ -129,25 +129,18 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                             </div>
                             <div class="col-sm-6">
                                 <button type="button" class="btn btn-light"><a href="formulaire-article.php">AJOUTER</a></button>
-                                <button type="button" class="btn btn-light"><a href="suprimer-article.php">SUPRIMER</a></button>
                             </div>
                             <div class="col-sm-12">
 
                                 <?php foreach ($exe2 as $row) :
 
-                                      ?>
+                                ?>
 
                                     <div class="article d-flex">
                                         <div class="container text-center">
                                             <div class="row article-box">
                                                 <div class="col-sm-3">
-                                                    <?php
-                                                    // $req = $conn->query('SELECT image FROM articles');
-                                                    // $data = $req->fetch();
-                                                       // echo "<img src='./upload/" . $data['image'] . " width='70%' alt='image article'>";
-                                                    
-                                                    ?>
-                                                    <img src=<?= "uploads/" .$row['image']?> width='70%' alt='image article'>
+                                                    <img src=<?= "uploads/" . $row['image'] ?> width='70%' alt='image article'>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <hgroup class="titre-date">
@@ -156,9 +149,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                     </hgroup>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <a href="edit.php">MODIFIER</A>
+                                                    <a href="edit-articles.php?id=<?= $row['id'] ?>" class="modifier">MODIFIER</a href="">
 
-                                                    <a href="voir-articles.php" class="voir">VOIR</a>
+                                                    <a href="voir-articles.php?id=<?= $row['id'] ?>" class="voir">VOIR</a>
+
+                                                    <a href="suprimer-article.php?id=<?= $row['id'] ?>" class="suprimer">SUPRIMER</a>
                                                 </div>
                                             </div>
                                         </div>

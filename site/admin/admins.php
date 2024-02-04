@@ -13,6 +13,12 @@ $readmin->execute();
 
 $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
 
+// Requête SQL pour compter tous les articles
+$req_nbr_admin = "SELECT COUNT(*) AS nbr_total_admin FROM admin";
+$nbr_total_admin_result = $conn->query($req_nbr_admin);
+$nbr_total_admin = $nbr_total_admin_result->fetch(PDO::FETCH_ASSOC)['nbr_total_admin'];
+
+
 ?>
 
 <?php require_once(__DIR__.'/dashboard-header.php') ?>
@@ -25,7 +31,7 @@ $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
           <p style="  font-size: 36px;text-align: start ;">ADMIN</p>
         </div>
         <div class="col-sm-6">
-          <p style=" text-align: start ;">tous(...)</p>
+        <p style="text-align: start;">Nombre total d'administrateur : <?= $nbr_total_admin ?></p>
         </div>
         <div class="col-sm-6">
           <button type="button" class="btn btn-light"><a href="formulaire-admin.php">AJOUTER</a></button>

@@ -19,7 +19,7 @@ try {
         //Tableau des extensions que l'on accepte
         $extensions = ['jpg', 'png', 'jpeg', 'gif'];
 
-        $maxSize = 70000;
+        // $maxSize = 70000;
 
         $error = false;
         $errorMessage = "";
@@ -28,45 +28,44 @@ try {
         // var_dump(in_array($extension, $extensions));
 
         if (in_array($extension, $extensions)) {
-            if ($size <= $maxSize) {
-                $uniqueName = uniqid('', true);
-                //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
-                $file = $uniqueName . "." . $extension;
+            // if ($size <= $maxSize) {
+            $uniqueName = uniqid('', true);
+            //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
+            $file = $uniqueName . "." . $extension;
 
-                $destination =  __DIR__ . '/uploads/' . $file;
-                //$file = 5f586bf96dcd38.73540086.jpg
+            $destination =  __DIR__ . '/uploads/' . $file;
+            //$file = 5f586bf96dcd38.73540086.jpg
 
-                move_uploaded_file($tmpName, $destination);
+            move_uploaded_file($tmpName, $destination);
 
-                // $req = $conn->prepare('INSERT INTO articles (image) VALUES (?)');
-                // $req->execute([$file]);
+            // $req = $conn->prepare('INSERT INTO articles (image) VALUES (?)');
+            // $req->execute([$file]);
 
-            }else{
-                $error = true;
-                $errorMessage = "La taille de l'imge est trop grande<br>";
-    
-            }
+            // }else{
+            //     $error = true;
+            //     $errorMessage = "La taille de l'imge est trop grande<br>";
+
+            // }
         } else {
             $error = true;
             $errorMessage = "cette extension n'est pas autorisée <br>";
         }
 
-        if($error == false) {
+        if ($error == false) {
             $titre = $_POST['titre'];
             $contenu = $_POST['contenu'];
             $image = isset($file) ? $file : '';
             $date_public = date("Y-m-d H:i:s");
-    
-    
-            $req = "INSERT INTO articles VALUES('','$titre','$image','$contenu','$date_public', '','')";
+            $categories_id = $_POST['categories_id'];
+        
+            $req = "INSERT INTO articles (titre, image, contenu, date_public, categories_id) VALUES (?, ?, ?, ?, ?)";
             $exe = $conn->prepare($req);
-            $exe->execute();
-
+            $exe->execute([$titre, $image, $contenu, $date_public, $categories_id]);
         } else {
             echo $errorMessage;
         }
-
-    }
+            }
+    
 } catch (PDOException $error) {
     echo "Erreur:" . $error->getMessage();
 }
@@ -92,6 +91,18 @@ try {
                         <input type="text" placeholder="titre" name="titre">
                         <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea><br>
                         <input type="file" name="image" id="image"><br>
+                        <select class="select-categorie" name="categories_id">
+                            <?php
+                            // Récupérez les catégories depuis la base de données
+                            $categoriesQuery = $conn->query("SELECT id, nom FROM categories");
+                            $categories = $categoriesQuery->fetchAll(PDO::FETCH_ASSOC);
+
+                            // Affichez les options de la liste déroulante
+                            foreach ($categories as $categorie) {
+                                echo "<option value='{$categorie['id']}'>{$categorie['nom']}</option>";
+                            }
+                            ?>
+                        </select> <br>
                         <input type="submit" name="submit">
                     </form>
                 </div>

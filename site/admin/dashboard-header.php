@@ -26,7 +26,7 @@ session_start();
                 }
                  ?>
                     <!-- Bouton de connexion -->
-                    <a href="connexion.php" class="button"> Deconnexion</a>
+                    <a href="deconnexion.php" class="button"> Deconnexion</a>
                 </span>
             </div>
 
