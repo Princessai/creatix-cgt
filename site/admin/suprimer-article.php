@@ -1,63 +1,41 @@
-<?php
+<?php 
 
 
 
-try {
-    $conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+if (isset($_GET['id'])  && !empty($_GET['id'])) {
+    
+    $conn2 = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
 
-    if (isset($_POST['submit'])) {
-        $articleIds = [$_POST['id']];
+    $id= strip_tags($_GET['id']);
 
+    $sql2= 'SELECT * FROM `articles` WHERE `id` = :id; ';
 
-        foreach ($articleIds as $articleId) {
-            $sql = "DELETE FROM articles WHERE id = :articleId";
-            $query = $conn->prepare($sql);
-            $query->bindParam(':articleId', $articleId, PDO::PARAM_INT);
-            $query->execute();
+    $rearticle = $conn2->prepare($sql2);
 
-            echo "Article with title $articleId deleted successfully<br>";
-        }
+    $rearticle->bindvalue(':id', $id, PDO::PARAM_INT);
+
+    $rearticle->execute();
 
 
+    $rows = $rearticle->fetch();
+
+    if (!$rows) {
+        $_SESSION['erreur'] = "cet id n'exsite pas";
+        header('location: dashboard.php');
+        die();
     }
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
+
+    $sql2= 'DELETE FROM `articles` WHERE `id` = :id; ';
+
+    $rearticle = $conn2->prepare($sql2);
+
+    $rearticle->bindvalue(':id', $id, PDO::PARAM_INT);
+
+    $rearticle->execute();
+
+    header('location: dashboard.php');
+}else {
+    $_SESSION['erreur'] = 'URL invalide';
+    header('Location: dashboard.php');
 }
-?>
 
-<?php require_once(__DIR__ . '/dashboard-header.php') ?>
-
-<div class="col-sm-9" id="">
-    <div class="cont">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-sm-12">
-                    <p style="  font-size: 36px;text-align: start ;">TOUTES LES CATEGORIES</p>
-                </div>
-                <div class="col-sm-6">
-                    <p style=" text-align: start ;">tous(...)</p>
-                </div>
-                <div class="col-sm-6">
-                   
-                </div>
-                <div class="col-sm-12">
-                    <form method="POST" action="">
-                        <label for="id">Titre de l'élément à supprimer :</label>
-                        <input type="text" name="id" required>
-                        <button type="submit" name="submit">Supprimer</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-</div>
-
-
-
-</html>
-
-<?php require_once(__DIR__ . '/dashboard-footer.php') ?>

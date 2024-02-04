@@ -42,11 +42,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         </div>
         <div class="col-sm-6">
           <button type="button" class="btn btn-light"><a href="formulaire-article.php">AJOUTER</a></button>
-          <button type="button" class="btn btn-light"><a href="suprimer-article.php">SUPRIMER</a></button>
+         
         </div>
         <div class="col-sm-12">
 
-          <?php foreach ($exe2 as $row) :  ?>
+          <?php foreach ($exe2 as $rows) :  ?>
 
 
             <div class="article d-flex">
@@ -54,18 +54,20 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 <div class="row article-box">
                   <div class="col-sm-3">
 
-                  <img src=<?= "uploads/" .$row['image']?> width='70%' alt='image article'>
+                  <img src=<?= "uploads/" .$rows['image']?> width='70%' alt='image article'>
                   </div>
                   <div class="col-sm-6">
                     <hgroup class="titre-date">
-                      <h5> <?= $row['titre'] ?></h5>
-                      <h6><?= $row['date_public'] ?></h6>
+                      <h5> <?= $rows['titre'] ?></h5>
+                      <h6><?= $rows['date_public'] ?></h6>
                     </hgroup>
                   </div>
                   <div class="col-sm-3">
-                    <a href="edit.php">MODIFIER</a href="">
+                    <a href="edit-articles.php?id=<?= $rows['id'] ?>" class="modifier">MODIFIER</a href="">
                    
-                    <a href="" class="voir">VOIR</a>
+                    <a href="voir-articles.php?id=<?= $rows['id'] ?>" class="voir">VOIR</a>
+
+                    <a href="suprimer-article.php?id=<?= $rows['id'] ?>" class="suprimer">SUPRIMER</a>
                   </div>
                 </div>
               </div>

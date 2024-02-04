@@ -55,8 +55,10 @@ if (isset($_GET['id'])  && !empty($_GET['id'])) {
           <p>PASSWORD : <?= $row['password'] ?></p>
           <p>DATE DE CREATION : <?= $row['date_creation'] ?></p>
           <br>
-          <p> <a href="edit.php?id=<?= $row['id'] ?>">MODIFIER</a></p>
-    
+          <p> <a href="edit.php?id=<?= $row['id'] ?>" class="modifier">MODIFIER</a>
+        <a href="delete.php?id=<?= $row['id'] ?>" class="suprimer"> SUPRIMER</a>
+        </p>
+          
           </div>
 
         </div>

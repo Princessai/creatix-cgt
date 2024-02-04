@@ -71,9 +71,9 @@ $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
                       <?php echo $row['email']; ?>
                     </td>
                     <td>
-                      <a href="voir.php?id=<?= $row['id'] ?>"> VOIR</a>
-                      <a href="edit.php?id=<?= $row['id'] ?>"> MODIFIER</a>
-                      <a href="delete.php?id=<?= $row['id'] ?>"> SUPRIMER</a>
+                      <a href="voir.php?id=<?= $row['id'] ?>" class="voir"> VOIR</a>
+                      <a href="edit.php?id=<?= $row['id'] ?>" class="modifier"> MODIFIER</a>
+                      <a href="delete.php?id=<?= $row['id'] ?>" class="suprimer"> SUPRIMER</a>
                     </td>
                   </tr>
                 <?php endforeach; ?>
