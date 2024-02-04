@@ -54,7 +54,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 <div class="row article-box">
                   <div class="col-sm-3">
 
-                    <img src="<?= $row['image'] ?>" width="70%" alt="image article">
+                  <img src=<?= "uploads/" .$row['image']?> width='70%' alt='image article'>
                   </div>
                   <div class="col-sm-6">
                     <hgroup class="titre-date">

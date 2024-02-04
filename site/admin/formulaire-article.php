@@ -1,57 +1,80 @@
 <?php
 
+try {
+    $conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
 
-$conn = new PDO('mysql:host=localhost;dbname=creatix', 'root', '');
-
-
-if (isset($_POST['submit'])) {
-    $titre = $_POST['titre'];
-    $contenu = $_POST['contenu'];
-    $date_public = date("Y-m-d H:i:s");
+    if (isset($_FILES['image'], $_POST['submit'])) {
 
 
-    $req = "INSERT INTO articles VALUES('','$titre','','$contenu','$date_public', '','')";
-    $exe = $conn->prepare($req);
-    $exe->execute();
-}
+        // Ajout de l'image uploadé dans le dossier upload puis dans la base de donnée 
 
-if (isset($_FILES['image'])) {
+        $tmpName = $_FILES['image']['tmp_name'];
+        $name = $_FILES['image']['name'];
+        $size = $_FILES['image']['size'];
+        // $file_error = $_FILES['image']['error'];
 
+        $tabExtension = explode('.', $name);
+        $extension = strtolower(end($tabExtension));
 
-    // Ajout de l'image uploadé dans le dossier upload puis dans la base de donnée 
+        //Tableau des extensions que l'on accepte
+        $extensions = ['jpg', 'png', 'jpeg', 'gif'];
 
-    $tmpName = $_FILES['image']['tmp_name'];
-    $name = $_FILES['image']['name'];
-    $size = $_FILES['image']['size'];
-    $error = $_FILES['image']['error'];
+        $maxSize = 70000;
 
-    $tabExtension = explode('.', $name);
-    $extension = strtolower(end($tabExtension));
+        $error = false;
+        $errorMessage = "";
 
-    //Tableau des extensions que l'on accepte
-    $extensions = ['jpg', 'png', 'jpeg', 'gif'];
+        // var_dump($size);
+        // var_dump(in_array($extension, $extensions));
 
-    $maxSize = 400000;
+        if (in_array($extension, $extensions)) {
+            if ($size <= $maxSize) {
+                $uniqueName = uniqid('', true);
+                //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
+                $file = $uniqueName . "." . $extension;
 
-    if (in_array($extension, $extensions) && $size <= $maxSize && $error == 0) {
+                $destination =  __DIR__ . '/uploads/' . $file;
+                //$file = 5f586bf96dcd38.73540086.jpg
 
-        $uniqueName = uniqid('', true);
-        //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
-        $file = $uniqueName . "." . $extension;
-        
-        //$file = 5f586bf96dcd38.73540086.jpg
+                move_uploaded_file($tmpName, $destination);
 
-        move_uploaded_file($tmpName, __DIR__ . '/uploads/' . $file);
+                // $req = $conn->prepare('INSERT INTO articles (image) VALUES (?)');
+                // $req->execute([$file]);
 
-        $req = $conn->prepare('INSERT INTO articles (image) VALUES (?)');
-        $req->execute([$file]);
-    } else {
-        echo "Une erreur est survenue";
+            }else{
+                $error = true;
+                $errorMessage = "La taille de l'imge est trop grande<br>";
+    
+            }
+        } else {
+            $error = true;
+            $errorMessage = "cette extension n'est pas autorisée <br>";
+        }
+
+        if($error == false) {
+            $titre = $_POST['titre'];
+            $contenu = $_POST['contenu'];
+            $image = isset($file) ? $file : '';
+            $date_public = date("Y-m-d H:i:s");
+    
+    
+            $req = "INSERT INTO articles VALUES('','$titre','$image','$contenu','$date_public', '','')";
+            $exe = $conn->prepare($req);
+            $exe->execute();
+
+        } else {
+            echo $errorMessage;
+        }
+
     }
-
+} catch (PDOException $error) {
+    echo "Erreur:" . $error->getMessage();
 }
 
-var_dump($_FILES);
+
+
+
+// var_dump($_FILES);
 
 ?>
 

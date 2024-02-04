@@ -133,29 +133,30 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                             </div>
                             <div class="col-sm-12">
 
-                                <?php foreach ($exe2 as $row) :  ?>
+                                <?php foreach ($exe2 as $row) :
 
+                                      ?>
 
                                     <div class="article d-flex">
                                         <div class="container text-center">
                                             <div class="row article-box">
                                                 <div class="col-sm-3">
                                                     <?php
-                                                    $req = $conn->query('SELECT image FROM articles');
-                                                    $data = $req->fetch();
-                                                        echo "<img src='./upload/" . $data['image'] . " width='70%' alt='image article'>";
+                                                    // $req = $conn->query('SELECT image FROM articles');
+                                                    // $data = $req->fetch();
+                                                       // echo "<img src='./upload/" . $data['image'] . " width='70%' alt='image article'>";
                                                     
                                                     ?>
+                                                    <img src=<?= "uploads/" .$row['image']?> width='70%' alt='image article'>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <hgroup class="titre-date">
                                                         <h5> <?= $row['titre'] ?></h5>
                                                         <h6><?= $row['date_public'] ?></h6>
-                                                        <h6><?= $row['id'] ?></h6>
                                                     </hgroup>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <a href="">MODIFIER</a href="">
+                                                    <a href="edit.php">MODIFIER</a href="">
 
                                                     <a href="" class="voir">VOIR</a>
                                                 </div>
