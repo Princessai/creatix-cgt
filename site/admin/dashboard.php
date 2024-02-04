@@ -63,7 +63,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     </hgroup>
                   </div>
                   <div class="col-sm-3">
-                    <a href="">MODIFIER</a href="">
+                    <a href="edit.php">MODIFIER</a href="">
                    
                     <a href="" class="voir">VOIR</a>
                   </div>

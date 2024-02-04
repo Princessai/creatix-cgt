@@ -78,7 +78,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                             <div class="accordion-body">
                                 <ul>
-                                    <li><a href="dashboard.php" class="text-categorie">Toutes les catégories</a></li>
+                                    <li><a href="dashboard.php" class="text-categorie">Toutes les articles</a></li>
                                     <hr>
 
                                     <?php
