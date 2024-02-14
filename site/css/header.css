@@ -54,3 +54,8 @@ justify-content: space-around;
     color: #fff;
     border-radius: 5px;
 }
+    
+    .logo {
+      color: #2988E3;
+      font-family: provicali;
+    }

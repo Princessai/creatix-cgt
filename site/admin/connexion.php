@@ -40,6 +40,8 @@ session_start();
                                     $_SESSION['email'] = $email;
                                     $_SESSION['password'] = $password;
                                     $_SESSION['id'] = $response['id'];
+                                    $_SESSION['nom'] = $response['nom'];
+                                    $_SESSION['prenom'] = $response['prenom'];
                                     header('Location: dashboard.php');
                                 } else {
                                     echo "<h6>Email ou mot de passe incorrect !</h6>";

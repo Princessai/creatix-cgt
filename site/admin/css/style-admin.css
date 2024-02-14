@@ -41,11 +41,11 @@ li {
 ul {
     padding-top: 15px;
     background-color: #ffffff;
-    margin-top: 20px;
     padding-bottom: 15px;
+    padding-left: 0px;
 }
 
- a {
+a {
     color: black;
     text-decoration: none;
 }
@@ -54,6 +54,7 @@ ul {
     color: #fff;
     font-size: 25px;
 }
+
 button {
     width: 200px;
 }
@@ -73,7 +74,6 @@ button {
     background-color: #2988E3;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    height: 900px;
     padding-top: 50px;
 
 }
@@ -85,10 +85,9 @@ button {
     padding-top: 80px;
 }
 
-.admin-card{
-  
+.admin-card {
+
     width: 100%;
-    height: 60px;
     display: flex;
     justify-content: space-around;
     border: none;
@@ -100,92 +99,107 @@ button {
 .ajout-form {
     display: flex;
     flex-direction: column;
-    
+
 }
 
-input[type="text"]{
-    margin: 15px 0;   
+input[type="text"] {
+    margin: 15px 0;
     padding: 10px 5px;
     width: 40%;
 
 }
 
-input[type="submit"]{
-   
+input[type="submit"] {
+
     width: 20%;
 
 }
 
-.nom-blog{
+.nom-blog {
     font-family: Provicali, sans-serif;
     font-size: 21px;
 }
 
-.text-categorie{
+.text-categorie {
     text-align: center;
 }
 
 
-.article{
-  width: 100%;
-  height: 100%;
-border: none;
-  background-color: white;
-  margin-top: 15px;
-  align-items: center;
+.article {
+    width: 100%;
+    border: none;
+    background-color: white;
+    margin-top: 15px;
+    align-items: center;
 }
 
-.article-box{
+.article-box {
     height: 100%;
     padding: 15px;
     align-items: center;
 }
 
-.modifier{
- color: rgb(3, 158, 230);
- margin: 5px;
-}
-
-.voir{
-    color: gray;
-    
+.modifier {
+    color: rgb(3, 158, 230);
     margin: 5px;
 }
 
-.suprimer{
+.voir {
+    color: gray;
+
+    margin: 5px;
+}
+
+.suprimer {
     color: rgb(224, 4, 4);
     margin: 5px;
 
 }
 
-.titre-date{
+.titre-date {
     text-align: start;
 }
 
-.accordion-body li{
+.accordion-body li {
     text-align: start;
 }
 
-.menu-button{
+.menu-button {
     color: white;
     background-color: #2988E3;
     width: 100%;
-    
-}
-.menu-button:hover {
-    background-color: #0c60af;
-    
+
 }
 
-.menu-button a{
+.menu-button:hover {
+    background-color: #0c60af;
+
+}
+
+.menu-button a {
     color: white;
 }
 
-.button{
+.button {
     border-radius: 10px;
     padding: 10px 40px;
     border: none;
     color: #2988E3;
     margin-left: 10px;
     background-color: #fff;
+}
+
+td {
+    padding: 0 20px;
+}
+
+.voir-contenu {
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden;    /* Cache le texte qui dépasse la taille de la cellule */
+    text-overflow: ellipsis; /* Ajoute des points de suspension (...) pour indiquer qu'il y a plus de texte */
+    max-width: 300px;
+}
+
+.select-categorie {
+    width: 200px;
 }
