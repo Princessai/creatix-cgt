@@ -84,8 +84,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                     <?php
                                     }
                                     ?>
+                                     
                                     
                                     <li> <button type="button" class="btn menu-button"><a href="creer-categorie.php">AJOUTER</a></button>
+                                    </li>
+                                  
+                                    
+
+                                   
                                     </li>
                                 </ul>
                             </div>
@@ -120,6 +126,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                             <div class="col-sm-6">
                                 <button type="button" class="btn btn-light"><a href="formulaire-article.php">AJOUTER</a></button>
                             </div>
+                            
                             <div class="col-sm-12">
 
                                   <?php foreach ($exe2 as $row):  ?>

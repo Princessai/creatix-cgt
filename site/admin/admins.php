@@ -31,6 +31,7 @@ $exe1 = $readmin->fetchAll(PDO::FETCH_ASSOC);
         <div class="col-sm-6">
           <button type="button" class="btn btn-light"><a href="formulaire-admin.php">AJOUTER</a></button>
         </div>
+        
         <div class="col-sm-12 mt-5">
           <div class="admin-card">
             <table class="table ">
