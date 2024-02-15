@@ -17,6 +17,7 @@ session_start();
     <div class="container">
         <div class="row">
             <div class="col-md-5">
+                <button class="btn btn-primary mt-5"><a href="../index.php">Retour</a></button>
                 <form class="connexionForm" action="" method="POST">
                     <?php
                     $host = 'localhost';

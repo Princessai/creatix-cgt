@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #F1F1F1;
@@ -9,38 +9,40 @@ header {
     background-color: #fff;
 
 }
+
 /* base */
 
 
 
 /* block */
 
-nav{
- display: flex;
- justify-content: center;
+nav {
+    display: flex;
+    justify-content: center;
 }
 
 .navbar {
     background-color: #fff !important;
 }
-.carreau-1{
-display: flex;
-justify-content: space-around;
+
+.carreau-1 {
+    display: flex;
+    justify-content: space-around;
 
 }
 
-.container{
+.container {
     font-family: Provicali;
 }
 
-.reseaux{
+.reseaux {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 200px;
 }
 
-.connexion{
+.connexion {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -54,8 +56,17 @@ justify-content: space-around;
     color: #fff;
     border-radius: 5px;
 }
-    
-    .logo {
-      color: #2988E3;
-      font-family: provicali;
-    }
+
+.logo {
+    color: #2988E3;
+    font-family: provicali;
+}
+
+.article-text {
+    max-height: 80px;
+    /* Limite la hauteur à 80 pixels (ajustez selon vos besoins) */
+    overflow: hidden;
+    /* Cache le texte dépassant */
+    text-overflow: ellipsis;
+    /* Remplace le texte excédant par des points de suspension */
+}
